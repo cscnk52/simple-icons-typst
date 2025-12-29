@@ -19,8 +19,6 @@ jobs:
         with:
           persist-credentials: false
 
-      - uses: actions-rust-lang/setup-rust-toolchain@1780873c7b576612439a134613cc4cc74ce5538c # v1.15.2
-
       - uses: extractions/setup-just@e33e0265a09d6d736e2ee1e0eb685ef1de4669ff # v3.0.0
 
       - run: just version-check
@@ -39,6 +37,10 @@ jobs:
           persist-credentials: false
 
       - uses: actions-rust-lang/setup-rust-toolchain@1780873c7b576612439a134613cc4cc74ce5538c # v1.15.2
+        with:
+          target: "wasm32-unknown-unknown"
+
+      - uses: typst-community/setup-typst@48aeee7543d37f01afd1ffb27307dc277387ba13 # v4.3.1
 
       - uses: extractions/setup-just@e33e0265a09d6d736e2ee1e0eb685ef1de4669ff # v3.0.0
 
