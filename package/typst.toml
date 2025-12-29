@@ -1,0 +1,12 @@
+[package]
+name = "simple-icons"
+version = "16.2.0"
+entrypoint = "/lib.typ"
+authors = ["Cason Kervis <cscnk52@outlook.com>"]
+license = "MIT"
+compiler = "0.14.2"
+repository = "https://github.com/cscnk52/simple-icons-typst"
+description = "SVG icons for popular brands in Typst"
+categories = ["utility", "components"]
+disciplines = ["design"]
+keywords = ["icons"]

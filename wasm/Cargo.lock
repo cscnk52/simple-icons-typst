@@ -136,8 +136,8 @@ dependencies = [
 ]
 
 [[package]]
-name = "sicons"
-version = "15.12.0"
+name = "simple-icons"
+version = "0.1.0"
 dependencies = [
  "simpleicons-rs",
  "wasm-minimal-protocol",
@@ -145,9 +145,9 @@ dependencies = [
 
 [[package]]
 name = "simpleicons-rs"
-version = "16.0.0"
+version = "16.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5ecd7102cab59454c06957c3b718ba14835375cd59cb8b11d8feecdab809728a"
+checksum = "34ca40cd296c42174751f8f36c3f4fdb7a2fe8e8ba53ff01b2f44c4b8aca6cfe"
 dependencies = [
  "csscolorparser",
 ]
@@ -203,7 +203,8 @@ checksum = "0b928f33d975fc6ad9f86c8f283853ad26bdd5b10b7f1542aa2fa15e2289105a"
 [[package]]
 name = "wasm-minimal-protocol"
 version = "0.1.0"
-source = "git+https://github.com/astrale-sharp/wasm-minimal-protocol#bb9ccd6b3f4bc554ffec61b89d7d8f15af6236b9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "264a7e0acbdd292aca03fee87eaea5a07647394c8985b19be27e950bde57930a"
 dependencies = [
  "proc-macro2",
  "quote",

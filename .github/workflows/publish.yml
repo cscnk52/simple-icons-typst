@@ -1,0 +1,61 @@
+name: Publish
+
+on:
+  schedule:
+    - cron: "0 0 * * 1,4"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      updated: ${{ steps.version-check.outputs.updated }}
+      version: ${{ steps.version-check.outputs.version }}
+    steps:
+      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions-rust-lang/setup-rust-toolchain@1780873c7b576612439a134613cc4cc74ce5538c # v1.15.2
+
+      - uses: extractions/setup-just@e33e0265a09d6d736e2ee1e0eb685ef1de4669ff # v3.0.0
+
+      - run: just version-check
+        id: version-check
+
+
+  publish:
+    needs: [check]
+    if: needs.check.outputs.updated == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions-rust-lang/setup-rust-toolchain@1780873c7b576612439a134613cc4cc74ce5538c # v1.15.2
+
+      - uses: extractions/setup-just@e33e0265a09d6d736e2ee1e0eb685ef1de4669ff # v3.0.0
+
+      - run: just build
+
+      - uses: stefanzweifel/git-auto-commit-action@28e16e81777b558cc906c8750092100bbb34c5e3 # v7.0.0
+        id: commit
+        with:
+          file_pattern: "*.toml *.lock"
+          commit_message: "chore(release): bump simple-icons-typst to ${{ needs.check.outputs.version }}"
+          commit_author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+
+      - uses: ncipollo/release-action@b7eabc95ff50cbeeedec83973935c8f306dfcd0b # v1.20.0
+        with:
+          commit: ${{ steps.commit.outputs.commit_hash}}
+          tag: v${{ needs.check.outputs.version }}
+          name: simple-icons-typst@v${{ needs.check.outputs.version }}
+          body: Update to [simple-icons ${{ needs.check.outputs.version }}](https://github.com/simple-icons/simple-icons/releases/tag/${{ needs.check.outputs.version }})
+          artifacts: "simple-icons-typst@*.pdf,simple-icons-typst@*.zip"
+          # immutableCreate: true
