@@ -60,4 +60,4 @@ jobs:
           name: simple-icons-typst@v${{ needs.check.outputs.version }}
           body: Update to [simple-icons ${{ needs.check.outputs.version }}](https://github.com/simple-icons/simple-icons/releases/tag/${{ needs.check.outputs.version }})
           artifacts: "simple-icons-typst@*.pdf,simple-icons-typst@*.zip"
-          # immutableCreate: true
+          immutableCreate: true
