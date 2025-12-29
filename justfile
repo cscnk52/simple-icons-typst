@@ -1,4 +1,9 @@
-REMOTE_VERSION := `curl -fsSL https://crates.io/api/v1/crates/simpleicons-rs | jq -r '.crate.max_version'`
+REMOTE_VERSION := shell(
+  "curl -fsSL \
+   -H 'User-Agent: github-actions/simple-icons-typst' \
+   https://crates.io/api/v1/crates/simpleicons-rs \
+   | jq -r '.crate.max_version'"
+)
 LOCAL_VERSION := `grep -oP 'version\s*=\s*"\K[0-9.]+' package/typst.toml`
 
 # Build everything
