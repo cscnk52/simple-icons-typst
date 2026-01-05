@@ -1,12 +1,12 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/cscnk52/typst-sicons/raw/refs/heads/main/assets/img/typst-dark.png" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/cscnk52/typst-sicons/raw/refs/heads/main/assets/img/typst-light.png" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/cscnk52/simple-icons-typst/raw/refs/heads/main/docs/images/simple-icons-typst-banner.dark.png" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/cscnk52/simple-icons-typst/raw/refs/heads/main/docs/images/simple-icons-typst-banner.light.png" />
   <img alt="simpleicons-rs banner" src="https://github.com/cscnk52/typst-sicons/raw/refs/heads/main/assets/img/typst-light.png" />
 </picture>
 
 <div align="center">
 
-# sicons
+# simple-icons-typst
 
 Access High quality [Simple Icons](https://simpleicons.org) SVGs from Typst.
 
@@ -15,14 +15,17 @@ Access High quality [Simple Icons](https://simpleicons.org) SVGs from Typst.
 > [!NOTE]
 > Since the compiled WASM module is relatively large (~5 MB), this package is only updated with new major releases of Simple Icons.
 
+> [!NOTE]
+> For previous user with package name "sicons", i'm trying move package name to "simple-icons", for better consistent, will be changed in v17.0.0(about release in May 2026)
+
 ## Usage
 
 Function:
 
-- sicon: return icon in SVG format
-- stitle: return icon name
-- sicon-label: return icon and name
-- sicon-raw: return Icon SVG code
+- simple-icon: return icon in SVG format
+- simple-title: return icon name
+- simple-label: return icon and name
+- simple-raw: return Icon SVG code
 
 Parameters:
 
@@ -36,15 +39,15 @@ Parameters:
 ```typst
 #import "@preview/sicons:16.0.0": *
 
-= typst sicons package Example
+= Typst sicons package Example
 
-#sicon(slug: "typst", size: 1em, icon-color: "default")
+#simple-icon(slug: "typst", size: 1em, icon-color: "default")
 
-#stitle(slug: "typst", size: 1em, text-color: "#000000")
+#simple-title(slug: "typst", size: 1em, text-color: "#000000")
 
-#sicon-label(slug: "typst", size: 1em,icon-color: "default", text-color: "#000000")
+#simple-label(slug: "typst", size: 1em,icon-color: "default", text-color: "#000000")
 
-#sicon-raw(slug: "typst")
+#simple-raw(slug: "typst")
 
 ```
 
