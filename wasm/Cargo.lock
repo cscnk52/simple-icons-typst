@@ -145,9 +145,9 @@ dependencies = [
 
 [[package]]
 name = "simpleicons-rs"
-version = "16.6.0"
+version = "16.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "186cf3cd3e507aecdc2a9b297cbb719ad95348c0088448c004e2cf71e02ccec8"
+checksum = "809cade7bc573d94d96a09066fa291c7f7a820dbf5f845c1414aaa5ec7406303"
 dependencies = [
  "csscolorparser",
 ]
