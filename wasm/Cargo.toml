@@ -7,7 +7,7 @@ edition = "2024"
 crate-type = ["cdylib"]
 
 [dependencies]
-simpleicons-rs = "16.7.0"
+simpleicons-rs = "16.8.0"
 wasm-minimal-protocol = "0.1.0"
 
 [profile.release]
