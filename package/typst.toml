@@ -1,6 +1,6 @@
 [package]
 name = "simple-icons"
-version = "16.8.0"
+version = "16.9.0"
 entrypoint = "/lib.typ"
 authors = ["Cason Kervis <cscnk52@outlook.com>"]
 license = "MIT"
