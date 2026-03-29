@@ -10,9 +10,9 @@ checksum = "c08606f8c3cbf4ce6ec8e28fb0014a2c086708fe954eaa885384a6165172e7e8"
 
 [[package]]
 name = "csscolorparser"
-version = "0.8.1"
+version = "0.8.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "02ee6eae4d99456f92dc379ba21cf08f783ef5525f193c3854b4e921ece045c5"
+checksum = "199f851bd3cb5004c09474252c7f74e7c047441ed0979bf3688a7106a13da952"
 dependencies = [
  "num-traits",
  "phf",
@@ -145,9 +145,9 @@ dependencies = [
 
 [[package]]
 name = "simpleicons-rs"
-version = "16.13.0"
+version = "16.14.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c7f652e6c5847c282f48eb855895df1d0c95af8f3a6bbfadb38b9aa1c1b6e2d8"
+checksum = "937205a3fcefeca5ceddb722ccf68705e573c69a8e1a4c9934b3882e18a867d3"
 dependencies = [
  "csscolorparser",
 ]
