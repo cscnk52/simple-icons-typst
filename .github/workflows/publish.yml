@@ -2,7 +2,8 @@ name: Publish
 
 on:
   schedule:
-    - cron: "0 0 * * 1,4"
+    - cron: "30 * * * 0"
+    - cron: "30 0 * * 1,4"
   workflow_dispatch:
 
 permissions:
@@ -23,7 +24,6 @@ jobs:
 
       - run: just version-check
         id: version-check
-
 
   publish:
     needs: [check]
