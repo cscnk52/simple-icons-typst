@@ -1,7 +1,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://github.com/cscnk52/simple-icons-typst/raw/refs/heads/main/docs/images/simple-icons-typst-banner.dark.png" />
   <source media="(prefers-color-scheme: light)" srcset="https://github.com/cscnk52/simple-icons-typst/raw/refs/heads/main/docs/images/simple-icons-typst-banner.light.png" />
-  <img alt="simpleicons-rs banner" src="https://github.com/cscnk52/typst-sicons/raw/refs/heads/main/assets/img/typst-light.png" />
+  <img alt="simple-icons-typst banner" src="https://github.com/cscnk52/typst-sicons/raw/refs/heads/main/assets/img/typst-light.png" />
 </picture>
 
 <div align="center">
@@ -51,7 +51,7 @@ Parameters:
 
 ```
 
-![Example page of sicons](https://github.com/cscnk52/typst-sicons/raw/refs/heads/main/docs/test.svg)
+![Example image for simple-icons-typst](https://github.com/cscnk52/typst-sicons/raw/refs/heads/main/docs/test.svg)
 
 # License
 

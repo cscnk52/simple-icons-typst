@@ -33,8 +33,6 @@ version-bump:
 [working-directory("wasm")]
 build-wasm: version-bump
     cargo build --release --target=wasm32-unknown-unknown
-    rm -f ../package/simple_icons.wasm
-    cp target/wasm32-unknown-unknown/release/simple_icons.wasm ../package/simple_icons.wasm
 
 # Build docs for latest version
 [group('build')]
@@ -46,4 +44,5 @@ build-docs: build-wasm
 [group('build')]
 [working-directory("package")]
 build-package: build-wasm
+    cp ../wasm/target/wasm32-unknown-unknown/release/simple_icons.wasm simple_icons.wasm
     7z a ../simple-icons-typst@v{{ REMOTE_VERSION }}.zip .

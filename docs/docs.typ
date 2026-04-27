@@ -14,7 +14,7 @@
 
 #set page(header: [#package@#version #h(1fr) #today],numbering: "1/1")
 
-#set document(title: [#package@#version], description: [#icons.len() SVG icons for popular brands in Typst], keywords: ("simple-icons", "SVG", "Typst", "WASM", "Rust"), author: author-name)
+#set document(title: [#package@#version], description: [#icons.len() SVG icons for popular brands in Typst], keywords: ("simple-icons", "SVG", "Typst", "WebAssembly", "Rust"), author: author-name)
 
 #set text( size: 12pt)
 
@@ -44,14 +44,14 @@
 
 = Overview
 
-_simple-icons-typst_ is a Typst package that provides SVG icons for popular brands. It allows you to insert brand icons directly in Typst documents withouts manual SVG handing.
+_Simple-icons-typst_ is a Typst package that provides SVG icons for popular brands. It allows you to insert brand icons directly in Typst documents without manual SVG handing.
 
 = Quick start
 
-use below code quick use this package.
+Use below code quick use this package.
 
 ```typ
-#import "@preview/simple-icons:16.0.0": simple-icon
+#import "@preview/simple-icons:[version]": simple-icon
 
 #simple-icon(slug: "typst")
 #simple-icon(slug: "github")
@@ -81,13 +81,13 @@ This package provide Typst support for the simple icons logos.
 
 = Version
 
-Because this package bundles all icons into a single WASM binary, the compiled WASM is approximately 5 MB. To avoid putting unnecessary strain on Typst Universe, only major versions like `x.0.0` are released to the Universe.
+Because this package bundles all icons into a single WASM binary, the compiled WASM is approximately 5 megabytes. To avoid putting unnecessary strain on Typst Universe, only major versions like `x.0.0` are released to the Universe.
 
-If you want use the latest package with newest icon, you can download latest package archive file from release, and load it manually in your own.
+If you want to use the latest package with newest icon, you can download latest package archive file from release, and load it manually by your own.
 
 =  Slugs
 
-Most of time, title contain non-ASCII character, to avoid encoding issues and to keep filenames easy to typing, search, and reference in terminals, URLs, and source code. We have below rules for slug, or you can see  for :
+Most of time, title contain non-ASCII character, to avoid encoding issues and to keep filenames easy to typing, search, and reference in terminals, URLs, and source code. We have below rules for slug, or you can see for :
 
 + Use *lowercase letters* without *whitespace*, for example:
 
@@ -96,7 +96,7 @@ Most of time, title contain non-ASCII character, to avoid encoding issues and to
   filename: adobephotoshop.svg
   ```
 
-+ Only use *latin* letters, for example:
++ Only use *Latin* letters, for example:
 
   ```yaml
   title: Citroën
@@ -132,7 +132,6 @@ Most of time, title contain non-ASCII character, to avoid encoding issues and to
   ```
 
 = Disclaimer
-
 
 
 #pagebreak()
