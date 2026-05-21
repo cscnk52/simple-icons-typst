@@ -1,8 +1,10 @@
-use wasm_minimal_protocol::*;
+#[cfg(target_arch = "wasm32")]
+use wasm_minimal_protocol::wasm_func;
 
-initiate_protocol!();
+wasm_minimal_protocol::initiate_protocol!();
 
 #[wasm_func]
+#[cfg(target_arch = "wasm32")]
 fn simple_icons_slug(slug: &[u8]) -> Result<Vec<u8>, String> {
     if let Some(icon) = simpleicons_rs::slug(std::str::from_utf8(slug).unwrap()) {
         Ok(icon.svg.as_bytes().to_vec())
@@ -12,6 +14,7 @@ fn simple_icons_slug(slug: &[u8]) -> Result<Vec<u8>, String> {
 }
 
 #[wasm_func]
+#[cfg(target_arch = "wasm32")]
 fn simple_icons_slug_colored(slug: &[u8], color: &[u8]) -> Result<Vec<u8>, String> {
     if let Some(icon) = simpleicons_rs::slug_colored(
         std::str::from_utf8(slug).unwrap(),
@@ -24,6 +27,7 @@ fn simple_icons_slug_colored(slug: &[u8], color: &[u8]) -> Result<Vec<u8>, Strin
 }
 
 #[wasm_func]
+#[cfg(target_arch = "wasm32")]
 fn simple_icons_title(slug: &[u8]) -> Result<Vec<u8>, String> {
     if let Some(icon) = simpleicons_rs::slug(std::str::from_utf8(slug).unwrap()) {
         Ok(icon.title.as_bytes().to_vec())
@@ -33,6 +37,7 @@ fn simple_icons_title(slug: &[u8]) -> Result<Vec<u8>, String> {
 }
 
 #[wasm_func]
+#[cfg(target_arch = "wasm32")]
 fn simple_icons_color(slug: &[u8]) -> Result<Vec<u8>, String> {
     if let Some(icon) = simpleicons_rs::slug(std::str::from_utf8(slug).unwrap()) {
         Ok(icon.hex.as_bytes().to_vec())

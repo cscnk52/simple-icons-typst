@@ -8,7 +8,7 @@ crate-type = ["cdylib"]
 
 [dependencies]
 simpleicons-rs = "16.20.0"
-wasm-minimal-protocol = "0.1.0"
+wasm-minimal-protocol = "0.2.0"
 
 [profile.release]
 opt-level = "z"
