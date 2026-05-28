@@ -32,7 +32,7 @@ version-bump:
 [group('build')]
 [working-directory("wasm")]
 build-wasm: version-bump
-    cargo build --release --target=wasm32-unknown-unknown
+    cargo build --release
 
 # Build docs for latest version
 [group('build')]
