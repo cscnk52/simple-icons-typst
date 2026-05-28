@@ -34,7 +34,7 @@ Parameters:
 - icon-color: icons hex color, default is "default", representation Simple Icons Color
 - text-color: text color, default to `#000000`
 
-# Example
+## Example
 
 ```typst
 #import "@preview/sicons:16.0.0": *
@@ -53,7 +53,7 @@ Parameters:
 
 ![Example image for simple-icons-typst](https://github.com/cscnk52/typst-sicons/raw/refs/heads/main/docs/test.svg)
 
-# License
+## License
 
 This package is under MIT LICENSE
 
