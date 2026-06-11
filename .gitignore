@@ -3,3 +3,4 @@
 *.zip
 *.json
 target
+Cargo.lock
