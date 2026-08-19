@@ -44,13 +44,6 @@ jobs:
 
       - run: just build
 
-      - uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9 # v7.1.0
-        id: commit
-        with:
-          file_pattern: "*.toml *.lock"
-          commit_message: "chore(release): bump simple-icons-typst to ${{ needs.check.outputs.version }}"
-          commit_author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
-
       - uses: ncipollo/release-action@339a81892b84b4eeb0f6e744e4574d79d0d9b8dd # v1.21.0
         with:
           commit: ${{ steps.commit.outputs.commit_hash}}

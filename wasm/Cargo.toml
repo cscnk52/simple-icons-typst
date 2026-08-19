@@ -7,6 +7,7 @@ edition = "2024"
 crate-type = ["cdylib"]
 
 [dependencies]
+csscolorparser = { version = "0.8.3", features = ["named-colors"] }
 simpleicons-rs = "0.0.0"
 wasm-minimal-protocol = "0.2.0"
 
