@@ -24,6 +24,8 @@ jobs:
 
       - run: just version-check
         id: version-check
+        env:
+          GH_TOKEN: ${{ github.token }}
 
   publish:
     needs: [check]
@@ -45,6 +47,8 @@ jobs:
       - uses: extractions/setup-just@53165ef7e734c5c07cb06b3c8e7b647c5aa16db3 # v4.0.0
 
       - run: just build
+        env:
+          GH_TOKEN: ${{ github.token }}
 
       - uses: ncipollo/release-action@339a81892b84b4eeb0f6e744e4574d79d0d9b8dd # v1.21.0
         with:
