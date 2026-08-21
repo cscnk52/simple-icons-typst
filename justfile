@@ -4,7 +4,7 @@ REMOTE_VERSION := shell(
    https://crates.io/api/v1/crates/simpleicons-rs \
    | jq -r '.crate.max_version'"
 )
-LOCAL_VERSION := `grep -oP 'version\s*=\s*"\K[0-9.]+' package/typst.toml`
+LOCAL_VERSION := `gh release view --json tagName --jq '.tagName | sub("^v"; "")'`
 
 # Build everything
 [group('build')]
